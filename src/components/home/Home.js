@@ -4,7 +4,6 @@ import ProductListing from "../../features/product-listing";
 export class  Home extends React.Component {
     constructor(props) {
         super(props);
-    
         this.state = {
           prod: [],
         };
@@ -18,9 +17,6 @@ export class  Home extends React.Component {
     }
     componentDidMount() {
         this.getData();
-    }
-    addcart(pr){
-        alert("Cart");
     }
     render () {
         return(

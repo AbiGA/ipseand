@@ -19,7 +19,7 @@ export class  About extends React.Component {
     render () {
         return(
             <div className="about">
-                 <p>This is about Component</p>
+                 <p>This is About Component</p>
                 <div className="App-title">Music Master</div>
                 <FormGroup>
                     <InputGroup>
