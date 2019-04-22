@@ -1,4 +1,5 @@
 import React from "react";
+import axios from 'axios';
 
 export default function CartListItem(props) { 
     return (
@@ -10,5 +11,13 @@ export default function CartListItem(props) {
             src={props.product.image}
             alt="myim"
         />
+         <button onClick = { function() {remove(props.product.id)}}>Delete Product</button>
     </div>);
   }
+  function remove(id) {
+    axios.delete('http://localhost/deletefromcart.php', { data: { id: id } }).then(res => {
+         console.log(res);
+         alert("Product Successfully deleted from your cart");
+      } ).catch(err => console.log('Error: ', err));
+}
+
